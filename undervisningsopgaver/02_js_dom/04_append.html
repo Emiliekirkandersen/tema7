@@ -73,7 +73,7 @@
 
 
     <footer>
-        <p>Dette er min footer</p>
+        Dette er min footer
     </footer>
 
 
@@ -113,6 +113,44 @@
         pic2.src = "https://placeimg.com/400/300/tech";
         console.log(pic2.src);
         console.log(pic2.alt);
+
+        let mainSection = document.querySelector("section");
+
+        // ny article element
+        let newArticle = document.createElement("article");
+
+
+        // ny img element
+        let img = document.createElement("img");
+        // billede til elementet
+        img.src = "https://placeimg.com/400/300/arch";
+        // tilføj billedet til article
+        newArticle.appendChild(img);
+
+
+        // ny h3 element
+        let overskrift = document.createElement("h3");
+        // tekst til overskrift
+        let overskriftText = document.createTextNode("Article 3");
+        // indsæt tekst i overskrift
+        overskrift.appendChild(overskriftText);
+        // tilføj overskrift til article
+        newArticle.appendChild(overskrift);
+
+
+
+        // ny p element
+        let paragraph = document.createElement("p");
+        // tekst til overskrift
+        let paragraphText = document.createTextNode("lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem");
+        // indsæt tekst i overskrift
+        paragraph.appendChild(paragraphText);
+        // tilføj overskrift til article
+        newArticle.appendChild(paragraph);
+
+
+        // tilføj article til section
+        mainSection.appendChild(newArticle);
 
     </script>
 </body>
