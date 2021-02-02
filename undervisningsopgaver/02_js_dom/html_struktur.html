@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header,
+        footer {
+            text-align: center;
+            border: 1px solid grey;
+            padding: 15px;
+        }
+
+        main {
+            margin-left: 10%;
+            width: 80%;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-gap: 1%;
+        }
+
+        article {
+            border: 1px solid grey;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="https://placeimg.com/400/300/nature" alt="natur" class="first">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est et nulla officia ducimus. Odit aliquam quis totam molestias accusamus, animi voluptatibus delectus culpa? Necessitatibus magni quidem modi, distinctio odio et.</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/400/300/animals" alt="dyr" class="second">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est et nulla officia ducimus. Odit aliquam quis totam molestias accusamus, animi voluptatibus delectus culpa? Necessitatibus magni quidem modi, distinctio odio et.</p>
+            </article>
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+    <footer>
+        <p>Dette er min footer</p>
+    </footer>
+
+
+    <script>
+        const titel = document.querySelector("header");
+        console.log(titel);
+        titel.textContent = "Billedegalleri";
+        titel.innerHTML = "<h1>Billeder</h1>";
+
+        const pic1 = document.querySelector("article:first-child img")
+        console.log(pic1);
+        pic1.alt = "billede af natur";
+
+    </script>
+</body>
+
+</html>
