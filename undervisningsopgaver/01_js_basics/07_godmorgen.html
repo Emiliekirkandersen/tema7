@@ -10,16 +10,24 @@
 
 <body>
     <script>
+        // newdate/gethours giver os et tal mellem 1-24 (tiden)
         const time = new Date().getHours();
         console.log("Time", time);
 
+        // start med at sige godnat, fordi der er tallet lavest (0-5) (< 5 = betyder hvis den er under 5)
         if (time < 5) {
             console.log("Godnat");
-        } else if (time < 10) {
+        }
+        // hvis den er mellem 5 og 10
+        else if (time < 10) {
             console.log("Godmorgen");
-        } else if (time < 18) {
+        }
+        // hvis den er mellem 10 og 18
+        else if (time < 18) {
             console.log("Goddag");
-        } else {
+        }
+        // hvis den ikke er noget af det ovenover, så skal den sige godaften - dvs fra 18-24
+        else {
             console.log("Godaften");
         }
 
