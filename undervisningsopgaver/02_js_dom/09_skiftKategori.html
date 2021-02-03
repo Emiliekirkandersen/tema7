@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header,
+        footer {
+            text-align: center;
+            border: 1px solid grey;
+            padding: 15px;
+        }
+
+        main {
+            margin-left: 10%;
+            width: 80%;
+        }
+
+        section {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+            grid-gap: 1%;
+        }
+
+        article {
+            border: 1px solid grey;
+        }
+
+        img {
+            width: 100%;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <h1>Titel</h1>
+    </header>
+
+    <main>
+        <h2>Undertitel</h2>
+        <section>
+            <article>
+                <img src="https://placeimg.com/400/300/nature" alt="" class="first">
+                <h3>Article 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est et nulla officia ducimus. Odit aliquam quis totam molestias accusamus, animi voluptatibus delectus culpa? Necessitatibus magni quidem modi, distinctio odio et.</p>
+            </article>
+            <article>
+                <img src="https://placeimg.com/400/300/animals" alt="" class="second">
+                <h3>Article 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est et nulla officia ducimus. Odit aliquam quis totam molestias accusamus, animi voluptatibus delectus culpa? Necessitatibus magni quidem modi, distinctio odio et.</p>
+            </article>
+
+        </section>
+
+
+
+
+
+    </main>
+
+
+    <footer>
+        Dette er min footer
+    </footer>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+
+
+
+
+        function start() {
+            console.log("dom er loaded");
+
+
+
+            /* ------ skift billede 1 ------ */
+
+            document.querySelector("article:nth-child(1) img").addEventListener("click", clickBillede);
+
+
+            function clickBillede() {
+                const pic1 = document.querySelector("article:nth-child(1) img");
+                const tilfældigtTal = Math.round(Math.random() * 10);
+                pic1.src = "https://placeimg.com/400/300/tech" + tilfældigtTal;
+            }
+
+
+
+            /* ------ skrift billede 2 -----*/
+            const billede = document.querySelector("article:nth-child(2) img");
+
+            const kategorier = ["animals", "arch", "people", "nature", "tech"];
+
+            kategorier.forEach(nummer => billede.addEventListener("click", skift));
+
+
+            function skift() {
+                const nummer = Math.round(Math.random() * 4);
+                billede.src = "https://placeimg.com/400/300/" + kategorier[nummer];
+                billede.alt = kategorier[nummer];
+            }
+
+
+
+
+
+
+
+
+
+            const titel = document.querySelector("h1");
+            titel.textContent;
+            console.log(titel.textContent);
+
+            const titel2 = document.querySelector("h2");
+            titel2.textContent;
+            console.log(titel2.textContent);
+
+            const article1 = document.querySelector("article:nth-child(1) h3");
+            article1.textContent;
+            console.log(article1.textContent);
+
+            const article2 = document.querySelector("article:nth-child(2) h3");
+            article2.textContent;
+            console.log(article2.textContent);
+
+            const tekst = document.querySelector("p");
+            tekst.textContent = "brødtekst";
+            console.log(tekst.textContent);
+
+            const footer = document.querySelector("footer");
+            footer.textContent = "footer";
+            console.log(footer.textContent);
+
+
+
+            const pic1 = document.querySelector("article:nth-child(1) img")
+            pic1.alt = "billede af natur";
+            console.log(pic1.alt);
+
+            const pic2 = document.querySelector("article:nth-child(2) img")
+            pic2.alt = "billede af tech";
+            pic2.src = "https://placeimg.com/400/300/tech";
+            console.log(pic2.src);
+            console.log(pic2.alt);
+
+            let mainSection = document.querySelector("section");
+
+            // ny article element
+            let newArticle = document.createElement("article");
+
+
+            // ny img element
+            let img = document.createElement("img");
+            // billede til elementet
+            img.src = "https://placeimg.com/400/300/arch";
+            // tilføj billedet til article
+            newArticle.appendChild(img);
+
+
+            // ny h3 element
+            let overskrift = document.createElement("h3");
+            // tekst til overskrift
+            let overskriftText = document.createTextNode("Article 3");
+            // indsæt tekst i overskrift
+            overskrift.appendChild(overskriftText);
+            // tilføj overskrift til article
+            newArticle.appendChild(overskrift);
+
+
+
+            // ny p element
+            let paragraph = document.createElement("p");
+            // tekst til overskrift
+            let paragraphText = document.createTextNode("lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem");
+            // indsæt tekst i overskrift
+            paragraph.appendChild(paragraphText);
+            // tilføj overskrift til article
+            newArticle.appendChild(paragraph);
+
+
+            // tilføj article til section
+            mainSection.appendChild(newArticle);
+
+        }
+
+    </script>
+</body>
+
+</html>
