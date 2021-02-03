@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+    <link rel="stylesheet" href="">
+
+    <style>
+        .typo {
+            font-family: monospace;
+            color: darkblue;
+            line-height: 150%;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <button>
+        RESET
+    </button>
+
+    <h3>En</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero ducimus, iste velit! Ea reprehenderit accusamus rem, a molestias sapiente error tempora harum fuga repellendus ex deleniti suscipit perspiciatis, assumenda. Unde!</p>
+    <h3>Lille</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At odit ducimus vitae quia dicta eaque, quo dolorum rem sit cumque aperiam voluptas fugit deserunt, amet quas dolore placeat. Exercitationem, totam!</p>
+    <h3>Bitte</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia nihil ipsum dolorum, odit dicta odio possimus molestiae obcaecati tenetur maiores consectetur nobis sit, voluptatibus aperiam ducimus, assumenda quos dignissimos maxime.</p>
+    <h3>Smule</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae sapiente quod unde, ut eaque hic pariatur necessitatibus eius eveniet. Aperiam ipsum, repudiandae quas praesentium voluptas eaque, quidem maiores inventore reprehenderit!</p>
+    <h3>Tekst</h3>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero quis ut maxime ullam quaerat eius accusamus nobis laboriosam perspiciatis alias earum ratione sapiente, aut quam, vel obcaecati ipsa voluptates aspernatur!</p>
+
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        function start() {
+            let alleP = document.querySelectorAll("p");
+            alleP.forEach(p => {
+                p.addEventListener("click", () => {
+                    p.classList.add("typo");
+                })
+            })
+
+
+            let alleH3 = document.querySelectorAll("h3");
+            alleH3.forEach(h3 => {
+                h3.addEventListener("click", () => {
+                    h3.classList.add("typo");
+                })
+            })
+
+
+
+            document.querySelector("button").addEventListener("click", () => {
+                alleP.forEach(p => {
+                    p.classList.remove("typo");
+                })
+            })
+
+
+            document.querySelector("button").addEventListener("click", () => {
+                alleH3.forEach(h3 => {
+                    h3.classList.remove("typo");
+                })
+            })
+        }
+
+    </script>
+</body>
+
+</html>
