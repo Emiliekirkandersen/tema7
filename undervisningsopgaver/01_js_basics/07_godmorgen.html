@@ -10,20 +10,18 @@
 
 <body>
     <script>
-        let længde = 30;
-        let bredde = 4;
-        let areal = længde * bredde;
-        let resultat;
+        const time = new Date().getHours();
+        console.log("Time", time);
 
-        if (areal < 100) {
-            resultat = "Arealet er for lille";
-        } else if (areal < 200) {
-            resultat = "Arealet er ok";
+        if (time < 5) {
+            console.log("Godnat");
+        } else if (time < 10) {
+            console.log("Godmorgen");
+        } else if (time < 18) {
+            console.log("Goddag");
         } else {
-            resultat = "Arealet er for stort";
+            console.log("Godaften");
         }
-
-        console.log(resultat);
 
     </script>
 </body>
