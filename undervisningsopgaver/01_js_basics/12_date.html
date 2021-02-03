@@ -40,29 +40,19 @@
             console.log("maximumAlder", maximumAlder);
 
             if (dinAlder < 15 || datesAlder < 15) {
-
                 console.log("En af parterne er for unge");
+
             } else {
                 if (datesAlder >= minimumAlder && datesAlder <= maximumAlder) {
                     console.log("Det er passende")
 
-
-
                 } else if (datesAlder < minimumAlder) {
-
                     console.log(`Du er ${dinAlder} og din date er ${datesAlder}. Din date er ${minimumAlder-datesAlder} år for ung`)
+
                 } else if (datesAlder >= maximumAlder) {
-
                     console.log(`Du er ${dinAlder} og din date er ${datesAlder}. Din date er ${datesAlder -maximumAlder} år for gammel`)
-
                 }
-
-
             }
-
-
-
-
         }
 
     </script>
