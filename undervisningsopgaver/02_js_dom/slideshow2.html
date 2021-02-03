@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Tro på det...</h1>
+    </header>
+
+    <main>
+        <img src="billeder/img1.png" alt="" class="first">
+        <button>Videre</button>
+    </main>
+
+
+    <footer>
+        Billeder brugt med tilladelse af Rasmus Bregnhøi
+    </footer>
+
+
+    <script>
+        //lav en tæller
+        let number = 0;
+
+        //find billede
+        const billede = document.querySelector("img");
+
+        //opret array
+        let billeder = ["img1.png", "img2.png", "img3.png", "img4.png", "img5.png", "img6.png", "img7.png", "img8.png"];
+
+        // klik på knap for skifte billede
+        const knap = document.querySelector("button");
+        knap.addEventListener("click", skiftBillede);
+
+        const skiftTekst = document.querySelector("button");
+
+        //opret funktion til at skifte billede
+        function skiftBillede() {
+
+            //hvis billedet < billed array så skal billedet skifte
+            if (number < 7) {
+
+                //tæl op
+                number++;
+                console.log(billeder[number]);
+                billede.src = "billeder/" + billeder[number];
+
+                skiftTekst.textContent = "Videre";
+                console.log(skiftTekst.textContent);
+
+            } else {
+                number = 0;
+                billede.src = "billeder/" + billeder[number];
+
+                skiftTekst.textContent = "Forfra";
+                console.log(skiftTekst.textContent);
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
