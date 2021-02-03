@@ -19,6 +19,7 @@
 
 
     <script>
+        // tilfældigt tal mellem 1 og 20 - round giver et rundt tal
         const tilfaeldigtTal = Math.round(Math.random() * 20);
         document.querySelector("button").addEventListener("click", guessTal);
 
@@ -26,10 +27,16 @@
             const guess = document.querySelector("gæt").value;
             // console.log("tilfaeldigtTal", tilfaeldigtTal);
             console.log("brugergæt", guess);
+
+            // hvis gættet er det tilfældige tal
             if (guess == tilfaeldigtTal) {
                 console.log("RIGTIGT!");
+
+                // hvis det er lavere end tallet
             } else if (guess < tilfaeldigtTal) {
                 console.log("For lavt");
+
+                // hvis ikke nogen af det ovenstående, så er det for højt
             } else {
                 console.log("For højt");
             }
