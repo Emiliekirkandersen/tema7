@@ -40,33 +40,29 @@
         const knap = document.querySelector("button");
         knap.addEventListener("click", skiftBillede);
 
-        const skiftTekst = document.querySelector("button");
-
         //opret funktion til at skifte billede
         function skiftBillede() {
+            billede.src = "billeder/" + billeder[number];
 
             //hvis billedet < billed array så skal billedet skifte
-            if (number < 7) {
+            if (number <= 6) {
 
                 //tæl op
                 number++;
                 console.log(billeder[number]);
-                billede.src = "billeder/" + billeder[number];
+                knap.textContent = "Videre";
+                console.log(knap.textContent);
 
-                skiftTekst.textContent = "Videre";
-                console.log(skiftTekst.textContent);
 
             } else {
                 number = 0;
-                billede.src = "billeder/" + billeder[number];
-
-                skiftTekst.textContent = "Forfra";
-                console.log(skiftTekst.textContent);
+                knap.textContent = "Forfra";
+                console.log(knap.textContent);
             }
-
         }
 
     </script>
+
 </body>
 
 </html>
