@@ -1,0 +1,27 @@
+[
+    {
+        "navn": "gris",
+        "type": "pattedyr",
+        "føde": ["mad", "mad", "mad"]
+            },
+    {
+        "navn": "frø",
+        "type": "amfibie",
+        "føde": ["mad", "mad", "mad"]
+            },
+    {
+        "navn": "ræv",
+        "type": "pattedyr",
+        "føde": ["mad", "mad", "mad"]
+            },
+    {
+        "navn": "sild",
+        "type": "fisk",
+        "føde": ["mad", "mad", "mad"]
+            },
+    {
+        "navn": "krokodille",
+        "type": "krybdyr",
+        "føde": ["mad", "mad", "mad"]
+            }
+]
