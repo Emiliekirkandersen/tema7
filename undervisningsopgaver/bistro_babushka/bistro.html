@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT&display=swap" rel="stylesheet">
+
+
+    <title>BISTRO BABUSHKA</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="navigation">
+        <div class="nav_logo">
+            <img src="facebook.png" alt="">
+            <img src="insta.png" alt="">
+        </div>
+        <div class="nav_links">
+            <a href="#">Menu</a>
+            <a href="#">Om os</a>
+            <a href="#">Reservation</a>
+        </div>
+    </div>
+
+    <div class="top">
+        <div class="top_text">
+            <h3>bistro</h3>
+            <h2>Babushka</h2>
+        </div>
+        <div class="menu_button">
+            <a href="#menu">Se menu</a>
+        </div>
+    </div>
+
+    <div id="menu">
+        <nav>
+            <button data-kategori="menu" class="valgt">Menu</button>
+            <button data-kategori="forretter">Forretter</button>
+            <button data-kategori="hovedretter">Hovedretter</button>
+            <button data-kategori="desserter">Desserter</button>
+            <button data-kategori="sideorders">Tilbehør</button>
+            <button data-kategori="drikkevarer">Drikkevarer</button>
+        </nav>
+    </div>
+
+    <header>
+        <h1>Menu</h1>
+    </header>
+
+    <section id="liste"></section>
+
+    <template>
+        <article class="ret">
+            <div class="container">
+                <img src="" alt="" class="billede">
+            </div>
+            <h2 class="navn"></h2>
+            <p class="kortbeskrivelse"></p>
+            <p class="pris"></p>
+        </article>
+    </template>
+
+
+
+
+
+
+    <footer id="footer">
+        <div class="footer_grid container">
+            <div class="column">
+                <h3>Kontakt</h3>
+
+                <address>
+                    Bistro Babushka <br>
+                    Linnésgade 24 <br>
+                    1361 København <br>
+                    Telefon: 8888 8888 <br>
+                </address>
+
+            </div>
+            <div class="column">
+                <h3>Åbningstider</h3>
+                <ul>
+                    <li>Mandag - Fredag: 11:00 til 22:00</li>
+                    <li>Lørdag: 12:00 til 23:00</li>
+                    <li>Søndag: Lukket</li>
+                </ul>
+            </div>
+        </div>
+        <p class="copyright">© Bistro Babushka</p>
+    </footer>
+
+
+
+
+
+
+    <script src="bistro.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,390 @@
+body {
+    font-family: Old Standard TT, sans-serif;
+    background-color: #f7fafa;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+img {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 3px 5px 7px rgba(101, 101, 101, 0.29);
+}
+
+.ret {
+    border: 1px solid #efefef;
+    border-radius: 2px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    background-color: white;
+}
+
+.billede {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+    filter: opacity(90%);
+}
+
+.container:hover .billede {
+    opacity: 0.3;
+    transform: scale(1.03);
+}
+
+
+/* --------------------- NAVIGATION ------------------ */
+
+.navigation {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navigation .nav_links {
+    display: flex;
+    float: right;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+
+.navigation .nav_links a {
+    text-decoration: none;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: white;
+    margin-right: 70px;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+.nav_links a:hover {
+    color: #5b6e6f;
+    transform: translateY(10%);
+    transition: .2s ease;
+}
+
+.nav_logo img {
+    width: 28.5px;
+    float: left;
+    margin: 10px;
+}
+
+
+/* --------------------- MENU KNAP ------------------ */
+.menu_button a {
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 24px;
+    margin-left: 24px;
+    background-color: rgba(255, 255, 255, 0.1);
+    text-transform: uppercase;
+}
+
+.menu_button a:hover {
+    background-color: #263839;
+    transform: scale(1.03);
+}
+
+
+
+/* --------------------- TOP ------------------------ */
+
+.top {
+    background-image: url(bistro.jpg);
+    text-align: center;
+    height: 100vh;
+    min-width: 100%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.top h3 {
+    font-family: Parisienne, sans-serif;
+    font-size: 60px;
+    color: white;
+}
+
+.top h2 {
+    font-family: Old Standard TT, sans-serif;
+    font-size: 150px;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: white;
+}
+
+.top_text {
+    z-index: 1;
+    padding: 30vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.top_text h3,
+.top_text h2 {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+
+/* -------------------------- TEKST ----------------------------- */
+
+h1 {
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 78px;
+    font-size: 45px;
+}
+
+h1,
+h2,
+h3,
+p {
+    text-align: center;
+}
+
+
+.ret h2 {
+    font-weight: 900;
+    font-size: 20px;
+    margin: 30px;
+    text-transform: uppercase;
+}
+
+.ret p {
+    margin: 30px;
+}
+
+.pris {
+    color: #263839;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+
+/* -------------------------- RETTER --------------------------- */
+
+#liste {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1em;
+    margin: 6em;
+}
+
+
+/* ------------------------ MENU NAV ---------------------------- */
+nav {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+}
+
+.valgt {
+    background-color: rgba(38, 56, 57, 0.4);
+}
+
+nav button {
+    border: none;
+    color: white;
+    padding: 8px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 24px;
+    margin-left: 24px;
+    background-color: #263839;
+    font-family: Old Standard TT, sans-serif;
+    text-transform: uppercase;
+}
+
+nav button:hover {
+    background-color: rgba(38, 56, 57, 0.32);
+    transform: scale(1.03);
+}
+
+
+
+/* ---------------------- FOOTER ------------------------------- */
+
+
+#footer {
+    padding: 5px 0 20px 0;
+    font-weight: 100;
+    background-color: #263839;
+    color: #fff;
+}
+
+#footer .container {
+    padding: 4rem 13rem 2rem 13rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+footer h3 {
+    text-align: left;
+    letter-spacing: 0.07rem;
+    line-height: 3rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+
+#footer address {
+    line-height: 1.4rem;
+    font-weight: 100;
+    list-style: none;
+    font-style: normal;
+    padding-left: 0;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 0.03rem;
+    padding-bottom: 0.7rem;
+}
+
+#footer .column {
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#footer adress {
+    line-height: 2;
+}
+
+#footer p {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    line-height: 1.4rem;
+}
+
+.copyright {
+    text-align: center;
+    color: #fff;
+    padding-top: 15px;
+    border-top: 1px solid #adacac;
+    font-weight: 100;
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+
+
+/* ---------------------- MEDIA Q ------------------------ */
+
+@media screen and (max-width: 1024px) {
+    .navigation {
+        display: none;
+    }
+
+    .top h3 {
+        font-size: 70px;
+    }
+
+    .top h2 {
+        font-size: 130px;
+    }
+
+    .top_text {
+        position: relative;
+        left: 0;
+        top: 0;
+        animation-name: none;
+        overflow: hidden;
+        padding-bottom: 25vh;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 20px;
+    }
+
+
+    .menu_button a {
+        margin: -50px;
+    }
+}
+
+
+@media screen and (max-width: 420px) {
+
+    .navigation .nav_links {
+        visibility: hidden;
+    }
+
+    .top h3 {
+        font-size: 30px;
+    }
+
+    .top h2 {
+        font-size: 67px;
+    }
+
+    .top_text {
+        position: relative;
+        left: 0;
+        top: 0;
+        overflow: hidden;
+        padding: 28vh;
+    }
+
+    .menu_button {
+        margin-top: 82px;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+        grid-gap: 20px;
+    }
+
+    nav button {
+        border: 0.2px solid rgba(36, 47, 42, 0.28);
+    }
+
+    #liste {
+        margin: 0;
+        overflow: hidden;
+    }
+
+    .ret {
+        margin-bottom: 32px;
+    }
+
+    h1 {
+        padding-bottom: 20px;
+    }
+
+    #footer .container {
+        padding: 2rem 2rem 2rem 2rem;
+        display: inherit;
+    }
+
+}
